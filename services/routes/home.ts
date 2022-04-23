@@ -1,13 +1,13 @@
 
 import { Router, RequestHandler } from "express";
 // import { user, person } from "../../shared/db/model";
-import { getTransaction } from "../../shared/lib/getTransaction";
+// import { getTransaction } from "../../shared/lib/getTransaction";
 import { Transaction } from "sequelize";
 import chalk from "chalk";
 // import { EventEmitter } from "events";
 
 const createData: RequestHandler = async (req, res, next) => {
-    const transaction: Transaction = await getTransaction();
+    // const transaction: Transaction = await getTransaction();
     // const { userId, userName, email, password } = req.body;
     // await user.create({ userId, userName, email, password }, {
     //     transaction
@@ -19,7 +19,7 @@ const createData: RequestHandler = async (req, res, next) => {
     // })
     // transaction.commit();
     // res.json({ success: true })
-    transaction.commit();
+    // transaction.commit();
     res.end();
 
 }
